@@ -9,7 +9,7 @@ services:
     environment:
       TZ: "America/Toronto"
       DNSMASQ_LISTENING: "all"
-      PIHOLE_UID: "0"
+      DNSMASQ_USER: "root"
     volumes:
       - pihole:/etc/pihole
       - pihole:/etc/dnsmasq.d
