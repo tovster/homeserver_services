@@ -1,2 +1,4 @@
 include:
   - uptime-kuma.yaml
+  - pihole.yaml
+  
