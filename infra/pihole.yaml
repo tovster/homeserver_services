@@ -11,12 +11,17 @@ services:
       DNSMASQ_LISTENING: "all"
       DNSMASQ_USER: "root"
     volumes:
-      - pihole:/etc/pihole
-      - pihole:/etc/dnsmasq.d
+      - pihole-etc:/etc/pihole
+      - pihole-dnsmasq.d:/etc/dnsmasq.d
     restart: unless-stopped
 volumes:
-  pihole:
+  pihole-etc:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/storagepool/docker/pihole"
+      device: ":/storagepool/docker/pihole/etc"
+  pihole-dnsmasq.d:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/storagepool/docker/pihole/dnsmasq.d"
