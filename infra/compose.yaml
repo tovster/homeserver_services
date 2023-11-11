@@ -1,4 +1,4 @@
 include:
   - uptime-kuma.yaml
   - pihole.yaml
-  
+  - homebridge.yaml
