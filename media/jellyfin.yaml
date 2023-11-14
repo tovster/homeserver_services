@@ -1,0 +1,27 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    ports:
+      - "8096:8096/tcp"
+    volumes:
+      - jellyfin-config:/config
+      - jellyfin-cache:/cache
+      - media:/media
+    restart: "unless-stopped"
+volumes:
+  media:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.101,rw,nolock,soft,nfsvers=4"
+      device: ":/mnt/high-priority/media "
+  jellyfin-config:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/storagepool/docker/jellyfin/config"
+  jellyfin-cache:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/storagepool/docker/jellyfin/cache"
