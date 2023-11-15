@@ -1,5 +1,5 @@
 include:
   - uptime-kuma.yaml
-  #- pihole.yaml
   - homebridge.yaml
   - nginx-proxy-manager.yaml
+  - heimdall.yaml
