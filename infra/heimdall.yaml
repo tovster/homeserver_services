@@ -1,0 +1,20 @@
+services:
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Toronto
+    volumes:
+      - heimdall:/config
+    ports:
+      - 880:80
+      - 8443:443
+    restart: unless-stopped
+volumes:
+  heimdall:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/storagepool/docker/heimdall"
