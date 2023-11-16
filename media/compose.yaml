@@ -2,3 +2,4 @@ include:
   - media-volume.yaml
   - jellyfin.yaml
   - radarr.yaml
+  - sonarr.yaml
