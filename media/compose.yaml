@@ -1,5 +1,6 @@
 include:
   - media-volume.yaml
   - jellyfin.yaml
+  - prowlarr.yaml
   - radarr.yaml
   - sonarr.yaml
