@@ -9,11 +9,6 @@ services:
       - media:/media
     restart: "unless-stopped"
 volumes:
-  media:
-    driver_opts:
-      type: "nfs"
-      o: "addr=192.168.2.101,rw,nfsvers=4"
-      device: ":/mnt/high-priority/media"
   jellyfin-config:
     driver_opts:
       type: "nfs"

@@ -1,0 +1,21 @@
+services:
+  radarr:
+    container_name: radarr
+    image: ghcr.io/hotio/radarr
+    restart: unless-stopped
+    ports:
+      - "7878:7878"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=America/Toronto
+    volumes:
+      - radarr:/config
+      - media:/data
+volumes:
+  radarr:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/storagepool/docker/radarr"
