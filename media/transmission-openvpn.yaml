@@ -13,6 +13,8 @@ services:
       - OPENVPN_USERNAME=$OPENVPN_USERNAME
       - OPENVPN_PASSWORD=$OPENVPN_PASSWORD
       - LOCAL_NETWORK=192.168.2.0/24
+      - TRANSMISSION_DOWNLOAD_DIR=/data/downloads
+      - TRANSMISSION_INCOMPLETE_DIR=
     logging:
       driver: json-file
       options:
