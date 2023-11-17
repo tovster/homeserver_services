@@ -6,3 +6,4 @@ include:
   - radarr.yaml
   - sonarr.yaml
   - lazylibrarian.yaml
+  - jellyseerr.yaml
