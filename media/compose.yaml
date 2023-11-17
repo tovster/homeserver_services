@@ -5,4 +5,4 @@ include:
   - transmission-openvpn.yaml
   - radarr.yaml
   - sonarr.yaml
-  - lazylibarian.yaml
+  - lazylibrarian.yaml
