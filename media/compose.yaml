@@ -1,0 +1,9 @@
+include:
+  - media-volume.yaml
+  - jellyfin.yaml
+  - prowlarr.yaml
+  - transmission-openvpn.yaml
+  - radarr.yaml
+  - sonarr.yaml
+  - lazylibrarian.yaml
+  - jellyseerr.yaml

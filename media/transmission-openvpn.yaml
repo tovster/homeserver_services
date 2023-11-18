@@ -1,0 +1,29 @@
+services:
+  transmission-openvpn:
+    container_name: transmission-openvpn
+    image: haugene/transmission-openvpn
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - media:/data
+      - transmission-openvpn:/config
+    environment:
+      - OPENVPN_PROVIDER=WINDSCRIBE
+      - OPENVPN_CONFIG=Toronto-ComfortZone-tcp
+      - OPENVPN_USERNAME=$OPENVPN_USERNAME
+      - OPENVPN_PASSWORD=$OPENVPN_PASSWORD
+      - LOCAL_NETWORK=192.168.2.0/24
+      - TRANSMISSION_DOWNLOAD_DIR=/data/downloads
+      - TRANSMISSION_INCOMPLETE_DIR=
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+    ports:
+      - "9091:9091"
+volumes:
+  transmission-openvpn:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/storagepool/docker/transmission-openvpn"
