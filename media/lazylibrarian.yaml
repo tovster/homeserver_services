@@ -12,7 +12,7 @@ services:
       - media:/data
     ports:
       - 5299:5299
-    restart: unless-stopped
+    restart: always
 volumes:
   lazylibrarian:
     driver_opts:

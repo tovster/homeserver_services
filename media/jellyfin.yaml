@@ -7,7 +7,7 @@ services:
       - jellyfin-config:/config
       - jellyfin-cache:/cache
       - media:/media
-    restart: "unless-stopped"
+    restart: always
 volumes:
   jellyfin-config:
     driver_opts:

@@ -2,7 +2,7 @@ services:
   uptime-kuma:
     container_name: uptime-kuma
     image: louislam/uptime-kuma:latest
-    restart: unless-stopped
+    restart: always
     ports:
       - 3001:3001
     volumes:
