@@ -2,7 +2,7 @@ services:
   radarr:
     container_name: radarr
     image: ghcr.io/hotio/radarr
-    restart: unless-stopped
+    restart: always
     ports:
       - "7878:7878"
     environment:
