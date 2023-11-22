@@ -13,4 +13,4 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/storagepool/docker/uptime-kuma"
+      device: ":/mnt/pve/docker/data/uptime-kuma"

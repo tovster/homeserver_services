@@ -15,9 +15,9 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/storagepool/docker/nginx-proxy-manager/data"
+      device: ":/mnt/pve/docker/data/nginx-proxy-manager/data"
   nginx-proxy-manager-letsencrypt:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/storagepool/docker/nginx-proxy-manager/letsencrypt"
+      device: ":/mnt/pve/docker/data/nginx-proxy-manager/letsencrypt"
