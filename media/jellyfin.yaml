@@ -8,6 +8,8 @@ services:
       - jellyfin-cache:/cache
       - media:/media
     restart: always
+    devices:
+      - "/dev/dri/renderD128:/dev/dri/renderD128"
 volumes:
   jellyfin-config:
     driver_opts:
