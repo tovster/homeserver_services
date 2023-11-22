@@ -13,9 +13,9 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/storagepool/docker/jellyfin/config"
+      device: ":/mnt/pve/docker/data/jellyfin/config"
   jellyfin-cache:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/storagepool/docker/jellyfin/cache"
+      device: ":/mnt/pve/docker/data/jellyfin/cache"
