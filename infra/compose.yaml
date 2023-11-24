@@ -1,5 +1,4 @@
 include:
-  - authentik.yaml
   - uptime-kuma.yaml
   - homebridge.yaml
   - nginx-proxy-manager.yaml
