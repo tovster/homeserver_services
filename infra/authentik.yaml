@@ -34,6 +34,7 @@ services:
     restart: always
     command: server
     environment:
+      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY}
       AUTHENTIK_REDIS__HOST: authentik-redis
       AUTHENTIK_POSTGRESQL__HOST: authentik-postgresql
       AUTHENTIK_POSTGRESQL__USER: authentik
