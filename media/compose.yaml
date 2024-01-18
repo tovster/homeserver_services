@@ -1,11 +1,11 @@
 include:
   - media-volume.yaml
-  #- jellyfin.yaml
-  - plex.yaml
+  - jellyfin.yaml
+#  - plex.yaml
   - prowlarr.yaml
   - transmission-openvpn.yaml
   - radarr.yaml
   - sonarr.yaml
   - lazylibrarian.yaml
-  #- jellyseerr.yaml
-  - overseerr.yaml
+  - jellyseerr.yaml
+#  - overseerr.yaml
