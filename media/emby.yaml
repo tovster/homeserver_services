@@ -1,0 +1,18 @@
+services:
+  emby:
+    image: emby/embyserver
+    container_name: embyserver
+    network_mode: host # Enable DLNA and Wake-on-Lan
+    environment:
+      - UID=1000
+      - GID=1000
+      - GIDLIST=100
+    volumes:
+      - /path/to/programdata:/config # Configuration directory
+      - /path/to/tvshows:/mnt/share1 # Media directory
+      - /path/to/movies:/mnt/share2 # Media directory
+    ports:
+      - 8096:8096
+    devices:
+      - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
+    restart: always
