@@ -2,13 +2,13 @@ services:
   emby:
     image: emby/embyserver
     container_name: embyserver
-    network_mode: host # Enable DLNA and Wake-on-Lan
+    network_mode: host
     environment:
       - UID=1000
       - GID=1000
       - GIDLIST=100
     volumes:
-      - /path/to/programdata:/config # Configuration directory
+      - emby:/config
       - media:/mnt/media
     ports:
       - 8096:8096
@@ -16,4 +16,8 @@ services:
       - "/dev/dri/renderD128:/dev/dri/renderD128"
     restart: always
 volumes:
-	emby:
+  emby:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
+      device: ":/mnt/pve/docker/data/jellyseerr"
