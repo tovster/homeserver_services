@@ -1,7 +1,8 @@
 include:
   - media-volume.yaml
-  - jellyfin.yaml
+#  - jellyfin.yaml
 #  - plex.yaml
+  - emby.yaml
   - prowlarr.yaml
   - transmission-openvpn.yaml
   - radarr.yaml
