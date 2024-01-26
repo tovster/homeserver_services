@@ -9,10 +9,11 @@ services:
       - GIDLIST=100
     volumes:
       - /path/to/programdata:/config # Configuration directory
-      - /path/to/tvshows:/mnt/share1 # Media directory
-      - /path/to/movies:/mnt/share2 # Media directory
+      - media:/mnt/media
     ports:
       - 8096:8096
     devices:
       - "/dev/dri/renderD128:/dev/dri/renderD128"
     restart: always
+volumes:
+	emby:
