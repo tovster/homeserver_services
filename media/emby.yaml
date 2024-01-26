@@ -20,4 +20,4 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
-      device: ":/mnt/pve/docker/data/jellyseerr"
+      device: ":/mnt/pve/docker/data/emby"
