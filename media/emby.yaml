@@ -3,10 +3,6 @@ services:
     image: emby/embyserver
     container_name: embyserver
     network_mode: host
-    environment:
-      - UID=1000
-      - GID=1000
-      - GIDLIST=100
     volumes:
       - emby:/config
       - media:/mnt/media
