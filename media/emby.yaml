@@ -3,6 +3,9 @@ services:
     image: emby/embyserver
     container_name: embyserver
     network_mode: host
+    environment:
+      - "UID=65534"
+      - "GID=65534"
     volumes:
       - emby:/config
       - media:/mnt/media
