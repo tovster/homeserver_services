@@ -6,7 +6,7 @@ services:
     environment:
       - UID=65534
       - GID=65534
-			- GIDLIST=44,109
+      - GIDLIST=44,109
     volumes:
       - emby:/config
       - media:/mnt/media
