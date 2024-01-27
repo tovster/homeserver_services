@@ -1,2 +1,3 @@
 include:
   - nginx-proxy-manager.yaml
+  - authentik.yaml
