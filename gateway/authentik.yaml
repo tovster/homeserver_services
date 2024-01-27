@@ -15,7 +15,7 @@ services:
       POSTGRES_USER: ${PG_USER:-authentik}
       POSTGRES_DB: ${PG_DB:-authentik}
     env_file:
-      - stack.env
+      - ../stack.env
   redis:
     image: docker.io/library/redis:alpine
     command: --save 60 1 --loglevel warning
@@ -42,7 +42,7 @@ services:
       - ./authentik/media:/media
       - ./authentik/custom-templates:/templates
     env_file:
-      - stack.env
+      - ../stack.env
     ports:
       - "${COMPOSE_PORT_HTTP:-9000}:9000"
       - "${COMPOSE_PORT_HTTPS:-9443}:9443"
@@ -64,7 +64,7 @@ services:
       - ./authentik/certs:/certs
       - ./authentik/custom-templates:/templates
     env_file:
-      - stack.env
+      - ../stack.env
     depends_on:
       - postgresql
       - redis
