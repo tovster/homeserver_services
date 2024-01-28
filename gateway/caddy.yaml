@@ -1,0 +1,24 @@
+services:
+  caddy:
+    image: marktov/caddy:latest
+    restart: always
+    network:
+      - caddy-net
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      - ACME_EMAIL=$ACME_EMAIL
+      - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
+      - ACME_AGREE=true
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local
