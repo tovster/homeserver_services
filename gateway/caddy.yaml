@@ -2,7 +2,7 @@ services:
   caddy:
     image: marktov/caddy:latest
     restart: always
-    network:
+    networks:
       - caddy-net
     ports:
       - "80:80"

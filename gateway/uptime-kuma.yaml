@@ -3,7 +3,7 @@ services:
     container_name: uptime-kuma
     image: louislam/uptime-kuma:latest
     restart: always
-    network:
+    networks:
       - caddy-net
     ports:
       - 3001:3001
