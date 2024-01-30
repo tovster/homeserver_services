@@ -6,3 +6,7 @@
 uptime-kuma.test.tovster.cloud {
     reverse_proxy uptime-kuma:3001
 }
+
+auth.test.tovster.cloud {
+    reverse_proxy authentik:9000
+}
