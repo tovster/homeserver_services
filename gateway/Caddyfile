@@ -4,5 +4,5 @@
 }
 
 uptime-kuma.test.tovster.cloud {
-	reverse-proxy uptime-kuma:3001
+    reverse_proxy uptime-kuma:3001
 }
