@@ -8,5 +8,5 @@ uptime-kuma.test.tovster.cloud {
 }
 
 auth.test.tovster.cloud {
-    reverse_proxy authentik:9000
+    reverse_proxy authentik-server:9000
 }
