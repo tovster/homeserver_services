@@ -13,7 +13,7 @@ services:
       - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
       - ACME_AGREE=true
     volumes:
-      - ./Caddyfile.json:/etc/caddy/Caddyfile
+      - ${PWD}/Caddyfile.json:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     container_name: caddy
