@@ -13,10 +13,10 @@ services:
       - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
       - ACME_AGREE=true
     volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     container_name: caddy
-    command: wget -P /etc/caddy/Caddyfile https://raw.githubusercontent.com/tovster/homeserver_services/main/gateway/Caddyfile -o Caddyfile
 networks:
   caddy-net:
     driver: bridge
