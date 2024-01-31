@@ -13,7 +13,7 @@ services:
       - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
       - ACME_AGREE=true
     volumes:
-      - ${PWD}/Caddyfile:/etc/caddy/Caddyfile
+      - /mnt/gateway/portainer-compose-unpacker/stacks/gateway/homeserver_services/gateway/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     container_name: caddy
