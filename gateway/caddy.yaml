@@ -17,6 +17,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     container_name: caddy
+    command: wget -P /tmp/ https://raw.githubusercontent.com/tovster/homeserver_services/main/gateway/Caddyfile -o Caddyfile
 networks:
   caddy-net:
     driver: bridge
