@@ -40,7 +40,7 @@ transmission.tovster.cloud {
 	reverse_proxy transmission-openvpn:9091
 }
 truenas.tovster.cloud {
-	reverse_proxy 192.168.2.110:443
+	reverse_proxy 192.168.2.101:443
 }
 uptimekuma.tovster.cloud {
 	reverse_proxy uptime-kuma:3001
