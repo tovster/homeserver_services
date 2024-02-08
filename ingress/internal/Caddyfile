@@ -4,7 +4,7 @@
 }
 
 adguard.tovster.cloud {
-	reverse_proxy 192.168.2.120:80
+	reverse_proxy http://192.168.2.120
 }
 
 portainer.tovster.cloud {
