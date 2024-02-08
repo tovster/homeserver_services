@@ -22,6 +22,7 @@ proxmox.tovster.cloud {
 			tls
 			tls_insecure_skip_verify
 		}
+	}
 }
 
 truenas.tovster.cloud {
@@ -30,4 +31,5 @@ truenas.tovster.cloud {
 			tls
 			tls_insecure_skip_verify
 		}
+	}
 }
