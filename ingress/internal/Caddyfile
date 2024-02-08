@@ -22,7 +22,7 @@ lazylibrarian.tovster.cloud {
 	reverse_proxy lazylibrarian:5299
 }
 portainer.tovster.cloud {
-	reverse_proxy portainer:8000
+	reverse_proxy portainer:9443
 }
 prowlarr.tovster.cloud {
 	reverse_proxy prowlarr:9696
