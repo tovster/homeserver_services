@@ -1,7 +1,5 @@
 include:
   - media-volume.yaml
-#  - jellyfin.yaml
-#  - plex.yaml
   - emby.yaml
   - prowlarr.yaml
   - transmission-openvpn.yaml
@@ -9,4 +7,3 @@ include:
   - sonarr.yaml
   - lazylibrarian.yaml
   - jellyseerr.yaml
-#  - overseerr.yaml

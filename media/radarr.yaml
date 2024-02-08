@@ -3,8 +3,8 @@ services:
     container_name: radarr
     image: ghcr.io/hotio/radarr
     restart: always
-    ports:
-      - "7878:7878"
+    networks:
+      - caddy-net-internal
     environment:
       - PUID=1000
       - PGID=1000

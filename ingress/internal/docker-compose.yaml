@@ -1,0 +1,31 @@
+services:
+  caddy:
+    image: marktov/caddy:latest
+    restart: always
+    networks:
+      - caddy-net-internal
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      - ACME_EMAIL=$ACME_EMAIL
+      - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
+      - ACME_AGREE=true
+      - LAYER=internal
+    volumes:
+      - /mnt/gateway/portainer-compose-unpacker/stacks/gateway/homeserver_services/gateway/ingress/${LAYER}/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    container_name: caddy
+    
+networks:
+  caddy-net-internal:
+    driver: bridge
+    attachable: true
+
+volumes:
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local

@@ -10,8 +10,8 @@ services:
     volumes:
       - lazylibrarian:/config
       - media:/data
-    ports:
-      - 5299:5299
+    networks:
+      - caddy-net-internal
     restart: always
 volumes:
   lazylibrarian:

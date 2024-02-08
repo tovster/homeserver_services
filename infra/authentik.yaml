@@ -38,7 +38,7 @@ services:
     command: server
     container_name: authentik-server
     networks:
-      - caddy-net
+      - caddy-net-internal
       - authentik-net
     environment:
       AUTHENTIK_REDIS__HOST: redis

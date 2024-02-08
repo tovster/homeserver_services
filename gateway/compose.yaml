@@ -1,4 +1,0 @@
-include:
-  - ./caddy.yaml
-  - ./uptime-kuma.yaml
-  - ./authentik.yaml

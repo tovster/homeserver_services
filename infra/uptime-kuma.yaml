@@ -3,8 +3,8 @@ services:
     container_name: uptime-kuma
     image: louislam/uptime-kuma:latest
     restart: always
-    ports:
-      - 3001:3001
+    networks:
+      - caddy-net-internal
     volumes:
       - uptime-kuma:/app/data
       - /var/run/docker.sock:/var/run/docker.sock

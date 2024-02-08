@@ -3,8 +3,8 @@ services:
     container_name: sonarr
     image: ghcr.io/hotio/sonarr
     restart: always
-    ports:
-      - "8989:8989"
+    networks:
+      - caddy-net-internal
     environment:
       - PUID=1000
       - PGID=1000
