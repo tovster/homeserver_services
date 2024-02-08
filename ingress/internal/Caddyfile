@@ -8,7 +8,7 @@ adguard.tovster.cloud {
 }
 
 portainer.tovster.cloud {
-	reverse_proxy http://portainer:8000
+	reverse_proxy http://portainer:9000
 }
 
 proxmox.tovster.cloud {
