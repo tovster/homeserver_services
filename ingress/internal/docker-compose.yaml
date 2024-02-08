@@ -14,7 +14,7 @@ services:
       - ACME_AGREE=true
       - LAYER=internal
     volumes:
-      - /mnt/gateway/portainer-compose-unpacker/stacks/gateway/homeserver_services/gateway/ingress/${LAYER}/Caddyfile:/etc/caddy/Caddyfile
+      - /mnt/gateway/portainer-compose-unpacker/stacks/ingress_{LAYER}/homeserver_services/ingress/${LAYER}/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     container_name: caddy
