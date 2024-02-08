@@ -3,48 +3,18 @@
 	email   {$ACME_EMAIL}
 }
 
-# auth.tovster.cloud {
-# 	reverse_proxy 192.168.2.:
-# }
 adguard.tovster.cloud {
 	reverse_proxy 192.168.2.120:80
 }
-emby.tovster.cloud {
-	reverse_proxy emby:8096
-}
-homebridge.tovster.cloud {
-	reverse_proxy homebridge:8581
-}
-jellyseer.tovster.cloud {
-	reverse_proxy jellyseer:5055
-}
-lazylibrarian.tovster.cloud {
-	reverse_proxy lazylibrarian:5299
-}
+
 portainer.tovster.cloud {
-	reverse_proxy portainer:9443
+	reverse_proxy https://portainer:9443
 }
-prowlarr.tovster.cloud {
-	reverse_proxy prowlarr:9696
-}
+
 proxmox.tovster.cloud {
 	reverse_proxy http://192.168.2.100:8006
-	transport http {
-		tls_insecure_skip_verify
-	}
 }
-radarr.tovster.cloud {
-	reverse_proxy radarr:7878
-}
-sonarr.tovster.cloud {
-	reverse_proxy sonarr:8989
-}
-transmission.tovster.cloud {
-	reverse_proxy transmission-openvpn:9091
-}
+
 truenas.tovster.cloud {
-	reverse_proxy 192.168.2.101:443
-}
-uptimekuma.tovster.cloud {
-	reverse_proxy uptime-kuma:3001
+	reverse_proxy http://192.168.2.101:443
 }
