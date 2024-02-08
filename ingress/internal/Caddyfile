@@ -29,6 +29,9 @@ prowlarr.tovster.cloud {
 }
 proxmox.tovster.cloud {
 	reverse_proxy http://192.168.2.100:8006
+	transport http {
+		tls_insecure_skip_verify
+	}
 }
 radarr.tovster.cloud {
 	reverse_proxy radarr:7878
