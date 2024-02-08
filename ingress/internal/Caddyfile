@@ -8,13 +8,26 @@ adguard.tovster.cloud {
 }
 
 portainer.tovster.cloud {
-	reverse_proxy http://portainer:9000
+	reverse_proxy https://portainer:9443 {
+		transport http {
+			tls
+			tls_insecure_skip_verify
+		}
+	}
 }
 
 proxmox.tovster.cloud {
-	reverse_proxy http://192.168.2.100:8006
+	reverse_proxy https://192.168.2.100:8006 {
+		transport http {
+			tls
+			tls_insecure_skip_verify
+		}
 }
 
 truenas.tovster.cloud {
-	reverse_proxy http://192.168.2.101
+	reverse_proxy https://192.168.2.101  {
+		transport http {
+			tls
+			tls_insecure_skip_verify
+		}
 }
