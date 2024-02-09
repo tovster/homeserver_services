@@ -16,5 +16,5 @@ volumes:
       device: ":/mnt/pve/docker/data/uptime-kuma"
 networks:
   caddy-net-internal:
-    external:
-      name: ingress_internal_caddy-net-internal
+    name: ingress_internal_caddy-net-internal
+    external: true
