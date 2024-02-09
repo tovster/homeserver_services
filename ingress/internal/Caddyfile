@@ -45,10 +45,5 @@ uptimekuma.tovster.cloud {
 }
 
 auth.tovster.cloud {
-	reverse_proxy https://authentik-server:8443 {
-		transport http {
-			tls
-			tls_insecure_skip_verify
-		}
-	}
+	reverse_proxy http://authentik-server:880
 }
