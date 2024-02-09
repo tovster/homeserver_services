@@ -17,3 +17,7 @@ volumes:
       type: "nfs"
       o: "addr=192.168.2.100,rw,nolock,soft,nfsvers=4"
       device: ":/mnt/pve/docker/data/homebridge"
+networks:
+  caddy-net-internal:
+    external:
+      name: ingress_internal_caddy-net-internal
