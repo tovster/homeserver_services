@@ -79,6 +79,10 @@ networks:
   authentik-net:
     driver: bridge
     attachable: true
+  caddy-net-internal:
+    external:
+      name: ingress_internal_caddy-net-internal
+
     
 volumes:
   database:
