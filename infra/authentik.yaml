@@ -80,8 +80,8 @@ networks:
     driver: bridge
     attachable: true
   caddy-net-internal:
-    external:
-      name: ingress_internal_caddy-net-internal
+    name: ingress_internal_caddy-net-internal
+    external: true
 
     
 volumes:
