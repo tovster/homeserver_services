@@ -4,8 +4,6 @@ services:
     container_name: homebridge
     restart: always
     network_mode: host
-    networks:
-      - caddy-net-internal
     environment:
       - HOMEBRIDGE_CONFIG_UI_PORT=8581
       - TZ=America/Toronto
