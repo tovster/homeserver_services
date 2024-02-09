@@ -22,6 +22,7 @@ networks:
   caddy-net-internal:
     driver: bridge
     attachable: true
+    external: true
 
 volumes:
   caddy_data:
