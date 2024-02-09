@@ -44,6 +44,8 @@ services:
       AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
       AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
       AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
+    env_file:
+      - stack.env
     volumes:
       - authentik_media:/media
       - authentik_custom_templates:/templates
@@ -66,6 +68,8 @@ services:
       AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
       AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
     user: root
+    env_file:
+      - stack.env
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - authentik_media:/media
