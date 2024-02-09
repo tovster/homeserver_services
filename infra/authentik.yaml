@@ -36,7 +36,7 @@ services:
     command: server
     container_name: authentik-server
     networks:
-      - caddy-net-internal
+      - ingress_internal_caddy-net-internal
       - authentik-net
     environment:
       AUTHENTIK_REDIS__HOST: redis
@@ -47,8 +47,6 @@ services:
     volumes:
       - ./authentik/media:/media
       - ./authentik/custom-templates:/templates
-    env_file:
-      - ../stack.env
     ports:
       - "${COMPOSE_PORT_HTTP:-9000}:9000"
       - "${COMPOSE_PORT_HTTPS:-9443}:9443"

@@ -4,7 +4,7 @@ services:
     image: louislam/uptime-kuma:latest
     restart: always
     networks:
-      - caddy-net-internal
+      - ingress_internal_caddy-net-internal
     volumes:
       - uptime-kuma:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
