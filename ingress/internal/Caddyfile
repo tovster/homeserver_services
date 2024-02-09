@@ -3,6 +3,7 @@
 	email   {$ACME_EMAIL}
 }
 
+#non-docker
 adguard.tovster.cloud {
 	reverse_proxy http://192.168.2.120
 }
@@ -27,6 +28,24 @@ proxmox.tovster.cloud {
 
 truenas.tovster.cloud {
 	reverse_proxy https://192.168.2.101  {
+		transport http {
+			tls
+			tls_insecure_skip_verify
+		}
+	}
+}
+
+#infra
+homebridge.tovster.cloud {
+	reverse_proxy http://192.168.2.110:8581
+}
+
+uptimekuma.tovster.cloud {
+	reverse_proxy http://uptime-kuma:3001
+}
+
+auth.tovster.cloud {
+	reverse_proxy https://authentik-server:8443 {
 		transport http {
 			tls
 			tls_insecure_skip_verify
