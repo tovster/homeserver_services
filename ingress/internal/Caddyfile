@@ -45,5 +45,5 @@ uptimekuma.tovster.cloud {
 }
 
 auth.tovster.cloud {
-	reverse_proxy http://authentik-server
+	reverse_proxy http://authentik-server:9000
 }
