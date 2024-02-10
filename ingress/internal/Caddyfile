@@ -66,7 +66,7 @@ emby.tovster.cloud {
 }
 
 jellyseerr.tovster.cloud {
-	reverse_proxy http://jellyseer:5055
+	reverse_proxy http://jellyseerr:5055
 }
 
 lazylibrarian.tovster.cloud {
