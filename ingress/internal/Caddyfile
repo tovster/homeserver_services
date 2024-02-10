@@ -47,6 +47,7 @@ truenas.tovster.cloud {
 
 #infra
 homebridge.tovster.cloud {
+	import authentik
 	reverse_proxy http://192.168.2.110:8581
 }
 
