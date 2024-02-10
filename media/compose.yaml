@@ -7,7 +7,6 @@ include:
   - sonarr.yaml
   - lazylibrarian.yaml
   - jellyseerr.yaml
-
 networks:
   caddy-net-internal:
     name: ingress_internal_caddy-net-internal
