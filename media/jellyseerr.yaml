@@ -4,8 +4,6 @@ services:
     container_name: jellyseerr
     environment:
       - TZ=America/Toronto
-    ports:
-      - 5055:5055
     networks:
       - caddy-net-internal
     volumes:
