@@ -10,8 +10,6 @@ services:
     volumes:
       - emby:/config
       - media:/mnt/media
-    networks:
-      - caddy-net-internal
     devices:
       - "/dev/dri:/dev/dri"
     restart: always
