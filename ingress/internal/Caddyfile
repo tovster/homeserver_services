@@ -90,6 +90,6 @@ transmission.tovster.cloud {
 }
 
 homeassistant.tovster.cloud {
-	reverse_proxy http://homeassistant:8123
+	reverse_proxy http://192.168.2.110:8123
 }
 
