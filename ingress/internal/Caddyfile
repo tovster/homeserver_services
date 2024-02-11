@@ -89,3 +89,7 @@ transmission.tovster.cloud {
 	reverse_proxy http://transmission-openvpn:9091
 }
 
+homeassistant.tovster.cloud {
+	reverse_proxy http://homeassistant:8123
+}
+
