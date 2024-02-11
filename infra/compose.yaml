@@ -2,6 +2,7 @@ include:
   - authentik.yaml
   - uptime-kuma.yaml
   - homebridge.yaml
+  - homeassistant.yaml
 networks:
   caddy-net-internal:
     name: ingress_internal_caddy-net-internal
