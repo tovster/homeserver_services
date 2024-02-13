@@ -74,18 +74,22 @@ lazylibrarian.tovster.cloud {
 }
 
 prowlarr.tovster.cloud {
+	import authentik
 	reverse_proxy http://prowlarr:9696
 }
 
 radarr.tovster.cloud {
+	import authentik
 	reverse_proxy http://radarr:7878
 }
 
 sonarr.tovster.cloud {
+	import authentik
 	reverse_proxy http://sonarr:8989
 }
 
 transmission.tovster.cloud {
+	import authentik
 	reverse_proxy http://transmission-openvpn:9091
 }
 
