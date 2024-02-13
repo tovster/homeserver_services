@@ -90,6 +90,7 @@ transmission.tovster.cloud {
 }
 
 homeassistant.tovster.cloud {
+	import authentik
 	reverse_proxy http://192.168.2.110:8123
 }
 
