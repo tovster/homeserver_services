@@ -98,3 +98,7 @@ homeassistant.tovster.cloud {
 	reverse_proxy http://192.168.2.110:8123
 }
 
+wg.tovster.cloud {
+	import authentik
+	reverse_proxy http://192.168.2.110:51821
+}
