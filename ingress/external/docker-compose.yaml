@@ -16,7 +16,7 @@ services:
       - /mnt/gateway/portainer-compose-unpacker/stacks/gateway/homeserver_services/gateway/ingress/external/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data_ext:/data
       - caddy_config_ext:/config
-    container_name: caddy
+    container_name: caddy_external
     
 networks:
   caddy-net-external:
