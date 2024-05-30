@@ -3,7 +3,7 @@ services:
     image: marktov/caddy:latest
     restart: always
     networks:
-      - caddy-net
+      - caddy-net-external
     ports:
       - "80:81"
       - "443:443"
@@ -14,8 +14,8 @@ services:
       - ACME_AGREE=true
     volumes:
       - /mnt/gateway/portainer-compose-unpacker/stacks/gateway/homeserver_services/gateway/ingress/external/Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
+      - caddy_data_ext:/data
+      - caddy_config_ext:/config
     container_name: caddy
     
 networks:
@@ -24,7 +24,7 @@ networks:
     attachable: true
 
 volumes:
-  caddy_data:
+  caddy_data_ext:
     driver: local
-  caddy_config:
+  caddy_config_ext:
     driver: local
