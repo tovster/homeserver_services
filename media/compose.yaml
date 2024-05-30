@@ -11,3 +11,6 @@ networks:
   caddy-net-internal:
     name: ingress_internal_caddy-net-internal
     external: true
+  caddy-net-external:
+    name: ingress_external_caddy-net-external
+    external: true
