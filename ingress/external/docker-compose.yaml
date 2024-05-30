@@ -5,9 +5,9 @@ services:
     networks:
       - caddy-net-external
     ports:
-      - "80:81"
-      - "443:444"
-      - "443:444/udp"
+      - "81:80"
+      - "444:443"
+      - "444:443/udp"
     environment:
       - ACME_EMAIL=$ACME_EMAIL
       - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
