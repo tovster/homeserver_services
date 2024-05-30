@@ -61,12 +61,8 @@ auth.tovster.cloud {
 }
 
 #media
-emby.tovster.cloud {
-	reverse_proxy http://192.168.2.110:8096
-}
-
-jellyseerr.tovster.cloud {
-	reverse_proxy http://jellyseerr:5055
+plex.tovster.cloud {
+	reverse_proxy http://192.168.2.110:32400
 }
 
 lazylibrarian.tovster.cloud {
@@ -101,4 +97,8 @@ homeassistant.tovster.cloud {
 wg.tovster.cloud {
 	import authentik
 	reverse_proxy http://192.168.2.110:51821
+}
+
+overseerr.tovster.cloud {
+	reverse_proxy http://overseerr:5055
 }

@@ -1,12 +1,12 @@
 include:
   - media-volume.yaml
-  - emby.yaml
+  - plex.yaml
   - prowlarr.yaml
   - transmission-openvpn.yaml
   - radarr.yaml
   - sonarr.yaml
   - lazylibrarian.yaml
-  - jellyseerr.yaml
+  - overseerr.yaml
 networks:
   caddy-net-internal:
     name: ingress_internal_caddy-net-internal
