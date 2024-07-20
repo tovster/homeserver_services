@@ -5,7 +5,7 @@ include:
   - transmission-openvpn.yaml
   - radarr.yaml
   - sonarr.yaml
-  - lazylibrarian.yaml
+#  - lazylibrarian.yaml
   - overseerr.yaml
 networks:
   caddy-net-internal:
