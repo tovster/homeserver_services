@@ -3,7 +3,6 @@ include:
   - uptime-kuma.yaml
   - homebridge.yaml
   - homeassistant.yaml
-  - wireguard.yaml
 networks:
   caddy-net-internal:
     name: ingress_internal_caddy-net-internal
