@@ -22,6 +22,8 @@ services:
         max-size: 10m
     networks:
       - caddy-net-internal
+    devices:
+      - /dev/net/tun
 volumes:
   transmission-openvpn:
     driver_opts:
