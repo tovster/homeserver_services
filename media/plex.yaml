@@ -8,7 +8,7 @@ services:
       - media:/media
     restart: always
     devices:
-      - "/dev/dri/renderD128:/dev/dri/renderD128"
+      - "/dev/dri:/dev/dri"
 volumes:
   plex-config:
     driver_opts:
